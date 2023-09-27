@@ -7,10 +7,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { MoreHorizontal, Archive, View } from "lucide-react";
+import { MoreHorizontal, Archive } from "lucide-react";
 import { Button } from "../ui/button";
 import { useTransactionData } from "@/hooks/TransactionsContext.hook";
-import TransactionDialog from "./TransactionsDialog";
+import TransactionsSidebar from "./TransactionsSidebar";
 
 type TransactionsTableRowProps = {
   item: ItemType;
@@ -36,7 +36,7 @@ export default function TransactionsTableRow({
       <TableCell>{item.channel}</TableCell>
       <TableCell>{item.status}</TableCell>
       <TableCell className="flex items-center gap-[8px]">
-        <TransactionDialog item={item} />
+        <TransactionsSidebar item={item} />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button size={"icon"} variant={"ghost"} className="h-8 w-8">
