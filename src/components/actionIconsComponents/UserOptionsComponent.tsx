@@ -15,6 +15,7 @@ export default function UserOptionsComponent() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
           <User className="h-[1.2rem] w-[1.2rem] transition-all" />
+          <span className="sr-only">User options menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="gap-[8px] flex flex-col p-[8px]">
