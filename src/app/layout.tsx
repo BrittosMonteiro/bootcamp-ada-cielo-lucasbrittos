@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bootcamp Ada & Cielo - Lucas Brittos",
+  description:
+    "Bootcamp project which intends to display important data about Cielo's transactions. Project developed by Lucas Brittos.",
+  applicationName: "Bootcamp - Ada & Cielo",
+  themeColor: "dark:bg-neutral-900 bg-[#f2f4f8]",
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { View } from "lucide-react";
+import { Search } from "lucide-react";
 import { ItemType } from "@/types/data.types";
 import {
   Sheet,
@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import SidebarDataItem from "./SidebarDataItem";
+import { faker } from "@faker-js/faker";
 
 type TransactionsDialogProps = {
   item: ItemType;
@@ -19,11 +20,17 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant={"ghost"} size={"icon"}>
-          <View />
+        <Button
+          variant={"ghost"}
+          size={"icon"}
+          className="h-8 w-8"
+          aria-label={`Item ${item.id}-${faker.number.int({ min: 100, max: 999 })}`}
+          role="button"
+        >
+          <Search />
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex flex-col max-w-sm:w-[100%]">
+      <SheetContent className="flex flex-col max-sm:w-full md:w-1/2">
         <SheetHeader>
           <SheetTitle>Informação da transação</SheetTitle>
         </SheetHeader>

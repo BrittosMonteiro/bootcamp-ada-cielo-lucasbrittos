@@ -9,7 +9,7 @@ export default function Transactions() {
 
   return (
     <div className="flex flex-col w-full gap-[16px]">
-      <span className="text-lg font-semibold text-[#5A646E] dark:text-white">
+      <span className="w-fit text-lg font-semibold text-[#5A646E] dark:text-white">
         HISTÓRICO DE TRANSAÇÕES
       </span>
       <Suspense fallback={<TransactionsSkeleton />}>
