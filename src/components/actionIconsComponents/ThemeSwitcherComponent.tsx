@@ -22,10 +22,10 @@ export default function ThemeSwitcherComponent() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => setTheme("light")} aria-label="light">
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} aria-label="dark">
           Dark
         </DropdownMenuItem>
       </DropdownMenuContent>
