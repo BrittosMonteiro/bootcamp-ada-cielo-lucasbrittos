@@ -8,9 +8,7 @@ describe("HeaderComponent", () => {
 
     expect(container).toBeInTheDocument();
   });
-});
-
-describe("HeaderComponent", () => {
+  
   it("Should render correctly", () => {
     const { getByText } = render(<HeaderComponent />);
 

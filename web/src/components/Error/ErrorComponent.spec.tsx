@@ -14,9 +14,7 @@ describe("ErrorComponent", () => {
     const htmlElement = container.querySelector("div");
     expect(htmlElement).toBeInTheDocument();
   });
-});
-
-describe("ErrorComponent", () => {
+  
   it("Should render and display its message correctly on screen", () => {
     const { getByText } = renderComponent();
     expect(

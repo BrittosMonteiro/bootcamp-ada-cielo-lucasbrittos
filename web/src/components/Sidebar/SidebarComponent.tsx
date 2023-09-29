@@ -16,7 +16,7 @@ type TransactionsDialogProps = {
   item: ItemType;
 };
 
-export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
+export default function SidebarComponent({ item }: TransactionsDialogProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -41,17 +41,17 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           <SidebarDataItem id="id" label="ID" value={item.id} />
           <SidebarDataItem
             id="merchantId"
-            label="Merchant Id"
+            label="ID do Comércio"
             value={item.merchantId}
           />
           <SidebarDataItem
             id="paymentNode"
-            label="Payment Node"
+            label="ID do Pagamento"
             value={item.paymentNode}
           />
           <SidebarDataItem
             id="cnpjRoot"
-            label="CNPJ Root"
+            label="CNPJ"
             value={item.cnpjRoot}
           />
           <SidebarDataItem
@@ -61,27 +61,27 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           />
           <SidebarDataItem
             id="paymentNode"
-            label="Payment Node"
+            label="Método de pagamento"
             value={item.paymentType}
           />
           <SidebarDataItem
             id="cardBrand"
-            label="Card Brand"
+            label="Bandeira do cartão"
             value={item.cardBrand}
           />
           <SidebarDataItem
             id="authorizationCode"
-            label="Authorization code"
+            label="ID Autorização"
             value={item.authorizationCode}
           />
           <SidebarDataItem
             id="truncatedCardNumber"
-            label="Truncated card number"
+            label="Nº encurtado"
             value={item.truncatedCardNumber}
           />
           <SidebarDataItem
             id="grossAmount"
-            label="Gross amount"
+            label="Total bruto"
             value={item.grossAmount.toLocaleString("pt-BR", {
               currency: "BRL",
               style: "currency",
@@ -89,7 +89,7 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           />
           <SidebarDataItem
             id="netAmount"
-            label="Net amount"
+            label="Quantia líquida"
             value={item.netAmount.toLocaleString("pt-BR", {
               currency: "BRL",
               style: "currency",
@@ -102,7 +102,7 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           />
           <SidebarDataItem
             id="administrationFee"
-            label="Administration Fee"
+            label="Taxa de Administração"
             value={item.administrationFee.toLocaleString("pt-BR", {
               currency: "BRL",
               style: "currency",
@@ -110,13 +110,13 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           />
           <SidebarDataItem
             id="channelCode"
-            label="Channel code"
+            label="ID do canal"
             value={item.channelCode}
           />
           <SidebarDataItem id="channel" label="Channel" value={item.channel} />
           <SidebarDataItem
             id="withdrawAmount"
-            label="Withdraw amount"
+            label="Quantia de saque"
             value={item.withdrawAmount.toLocaleString("pt-BR", {
               currency: "BRL",
               style: "currency",
@@ -124,17 +124,17 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           />
           <SidebarDataItem
             id="minimumMDRAmmount"
-            label="Minimum MDR amout"
+            label="Taxa de desconto mínima"
             value={item.minimumMDRAmmount}
           />
           <SidebarDataItem
             id="mdrTaxAmount"
-            label="MDR Tax amount"
+            label="Taxa de desconto"
             value={item.mdrTaxAmount}
           />
           <SidebarDataItem
             id="mdrFeeAmount"
-            label="MDR Free amount"
+            label="Valor isento de desconto"
             value={item.mdrFeeAmount}
           />
           <SidebarDataItem id="status" label="Status" value={item.status} />

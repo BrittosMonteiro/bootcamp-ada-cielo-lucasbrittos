@@ -12,7 +12,6 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 type TransactionsContextProps = {
   summary: SummaryType;
   items: ItemType[];
-  archiveItem: (id: ItemType["id"]) => void;
 };
 
 type TransactionsProviderProps = {
@@ -50,12 +49,8 @@ export const TransactionsProvider: React.FC<TransactionsProviderProps> = ({
     getApiData();
   }, []);
 
-  const archiveItem = (id: ItemType["id"]): void => {
-    console.log(`Item ${id} will be archived.`);
-  };
-
   return (
-    <TransactionsContext.Provider value={{ summary, items, archiveItem }}>
+    <TransactionsContext.Provider value={{ summary, items }}>
       {children}
     </TransactionsContext.Provider>
   );

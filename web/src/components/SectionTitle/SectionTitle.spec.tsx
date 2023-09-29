@@ -11,9 +11,7 @@ describe("SectionTitleComponent", () => {
 
     expect(container).toBeInTheDocument();
   });
-});
-
-describe("SectionTitleComponent", () => {
+  
   it("Should render correctly and display its title on screen", () => {
     const { getByText } = render(<SectionTitleComponent title={title} />);
 

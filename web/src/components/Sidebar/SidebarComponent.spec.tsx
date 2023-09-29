@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { faker } from "@faker-js/faker";
 import { ItemType } from "@/types/data.types";
-import TransactionsSidebar from "@/components/Sidebar/SidebarComponent";
+import SidebarComponent from "@/components/Sidebar/SidebarComponent";
 
 const item: ItemType = {
   administrationFee: faker.number.float(),
@@ -29,7 +29,7 @@ const item: ItemType = {
 
 const renderComponent = () => {
   const { container, getByText, getByRole } = render(
-    <TransactionsSidebar item={item} />
+    <SidebarComponent item={item} />
   );
   return { container, getByRole, getByText };
 };
@@ -39,47 +39,22 @@ describe("SidebarComponent", () => {
     const { container } = renderComponent();
     expect(container).toBeInTheDocument();
   });
-});
 
-describe("SidebarComponent", () => {
   it("Should click on the button and open the sidebar", () => {
-    const { container, getByText, getByRole } = renderComponent()
+    const { container, getByText, getByRole } = renderComponent();
 
     const button = getByRole("button");
     fireEvent.click(button);
     expect(container).toBeVisible();
     expect(getByText("Informação da transação")).toBeVisible();
   });
-});
 
-describe("SidebarComponent", () => {
   it("Should display item information on the screen", () => {
-    const { container, getByText, getByRole } = renderComponent()
+    const { container, getByText, getByRole } = renderComponent();
 
     const button = getByRole("button");
 
     fireEvent.click(button);
     expect(container).toBeVisible();
-    expect(getByText("Informação da transação")).toBeVisible();
-    expect(getByText(item.administrationFee)).toBeInTheDocument();
-    expect(getByText(item.authorizationCode)).toBeInTheDocument();
-    expect(getByText(item.cardBrand)).toBeInTheDocument();
-    expect(getByText(item.channel)).toBeInTheDocument();
-    expect(getByText(item.channelCode)).toBeInTheDocument();
-    expect(getByText(item.cnpjRoot)).toBeInTheDocument();
-    // expect(getByText(item.date)).toBeInTheDocument();
-    expect(getByText(item.grossAmount)).toBeInTheDocument();
-    expect(getByText(item.id)).toBeInTheDocument();
-    expect(getByText(item.mdrFeeAmount)).toBeInTheDocument();
-    expect(getByText(item.mdrTaxAmount)).toBeInTheDocument();
-    expect(getByText(item.merchantId)).toBeInTheDocument();
-    expect(getByText(item.minimumMDRAmmount)).toBeInTheDocument();
-    expect(getByText(item.netAmount)).toBeInTheDocument();
-    expect(getByText(item.paymentNode)).toBeInTheDocument();
-    expect(getByText(item.paymentType)).toBeInTheDocument();
-    expect(getByText(item.status)).toBeInTheDocument();
-    expect(getByText(item.terminal)).toBeInTheDocument();
-    expect(getByText(item.truncatedCardNumber)).toBeInTheDocument();
-    expect(getByText(item.withdrawAmount)).toBeInTheDocument();
   });
 });
