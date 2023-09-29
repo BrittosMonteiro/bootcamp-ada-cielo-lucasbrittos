@@ -1,8 +1,8 @@
 "use client";
 
-import HeaderComponent from "@/components/custom/HeaderComponent";
-import HistoricDataComponent from "@/components/custom/HistoricDataComponent";
-import WrapperComponent from "@/components/custom/WrapperComponent";
+import HeaderComponent from "@/components/Header/HeaderComponent";
+import HistoricDataComponent from "@/components/Main/MainComponent";
+import WrapperComponent from "@/components/Wrapper/WrapperComponent";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import SummaryCard from "@/components/custom/SummaryCard";
+import SummaryCard from "@/components/Summary/SummaryCard";
 
 describe("SummaryCard", () => {
   it("Should render the card with correct title and value", () => {

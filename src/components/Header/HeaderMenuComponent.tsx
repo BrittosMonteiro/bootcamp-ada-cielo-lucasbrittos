@@ -10,12 +10,6 @@ export default function HeaderMenuComponent() {
       >
         Dashboard
       </Link>
-      <Link
-        href="/"
-        className="text-neutral-500 hover:text-neutral-700 dark:text-neutral-300 dark:hover:text-neutral-100 text-md font-semibold text-muted-foreground transition-colors"
-      >
-        Relatório
-      </Link>
     </nav>
   );
 }

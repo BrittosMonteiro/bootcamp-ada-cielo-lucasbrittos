@@ -10,7 +10,7 @@ import {
 import { MoreHorizontal, Archive } from "lucide-react";
 import { Button } from "../ui/button";
 import { useTransactionData } from "@/hooks/TransactionsContext.hook";
-import TransactionsSidebar from "./TransactionsSidebar";
+import TransactionsSidebar from "../Sidebar/SidebarComponent";
 import { faker } from "@faker-js/faker";
 
 type TransactionsTableRowProps = {

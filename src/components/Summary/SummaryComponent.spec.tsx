@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Summary from "@/components/custom/Summary";
+import Summary from "@/components/Summary/SummaryComponent";
 
 describe("Summary", () => {
   it("Should render correctly", () => {

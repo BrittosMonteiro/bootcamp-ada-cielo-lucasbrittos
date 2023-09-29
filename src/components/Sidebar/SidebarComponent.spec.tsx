@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { faker } from "@faker-js/faker";
 import { ItemType } from "@/types/data.types";
-import TransactionsSidebar from "@/components/custom/TransactionsSidebar";
+import TransactionsSidebar from "@/components/Sidebar/SidebarComponent";
 
 const item: ItemType = {
   administrationFee: faker.number.float(),
