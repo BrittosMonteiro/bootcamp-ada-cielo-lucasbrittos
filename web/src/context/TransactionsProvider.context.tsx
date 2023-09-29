@@ -1,6 +1,12 @@
 "use client";
 import { getData } from "@/service/getDataFromAPI";
-import { DataType, ItemType, SummaryType } from "@/types/data.types";
+import {
+  CardBrandTotalNetAmountType,
+  DataType,
+  ItemType,
+  SummaryType,
+} from "@/types/data.types";
+import { getCardBrandsData } from "@/utils/utils";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 type TransactionsContextProps = {
@@ -21,6 +27,9 @@ export const TransactionsProvider: React.FC<TransactionsProviderProps> = ({
   children,
 }) => {
   const [items, setItems] = useState<ItemType[] | []>([]);
+  const [cardBrandTotalNetAmount, setCardBrandTotalNetAmount] = useState<
+    CardBrandTotalNetAmountType[]
+  >([]);
   const [summary, setSummary] = useState<SummaryType>({
     totalQuantity: 0,
     totalNetAmount: 0,
@@ -34,6 +43,7 @@ export const TransactionsProvider: React.FC<TransactionsProviderProps> = ({
     const data: DataType = await getData();
     setItems(data.items);
     setSummary(data.summary);
+    setCardBrandTotalNetAmount(getCardBrandsData(data.items));
   };
 
   useEffect(() => {

@@ -9,7 +9,7 @@ export default function TransactionsTableCells() {
       <TableHead className="w-fit">DATA</TableHead>
       <TableHead className="w-fit">OPERADORA</TableHead>
       <TableHead className="w-fit">MÉTODO</TableHead>
-      <TableHead className="w-fit text-right">TOTAL</TableHead>
+      <TableHead className="w-fit text-right">TOTAL LÍQUIDO</TableHead>
       <TableHead className="w-fit">CANAL</TableHead>
       <TableHead className="w-fit">STATUS</TableHead>
       <TableHead className="w-fit">AÇÕES</TableHead>

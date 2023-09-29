@@ -6,13 +6,11 @@ import TransactionsSkeleton from "./TransactionsSkeleton";
 import SectionTitle from "../SectionTitle/SectionTitleComponent";
 
 export default function Transactions() {
-  const { items } = useTransactionData();
-
   return (
     <div className="flex flex-col w-full gap-[16px]">
       <SectionTitle title="HISTÓRICO DE TRANSAÇÕES" />
       <Suspense fallback={<TransactionsSkeleton />}>
-        {items ? <TransactionsTable /> : <ErrorComponent />}
+        <TransactionsTable />
       </Suspense>
     </div>
   );

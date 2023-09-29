@@ -44,3 +44,8 @@ export type DataType = {
   pagination: PaginationType;
   items: ItemType[];
 };
+
+export type CardBrandTotalNetAmountType = {
+  brand: ItemType['cardBrand'];
+  totalNetAmount: ItemType['netAmount'];
+};

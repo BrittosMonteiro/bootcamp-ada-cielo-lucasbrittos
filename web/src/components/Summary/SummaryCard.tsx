@@ -5,9 +5,14 @@ import { ArrowUp } from "lucide-react";
 type SummaryCardProps = {
   title: string;
   value: number;
+  isCurrency: boolean;
 };
 
-export default function SummaryCard({ title, value }: SummaryCardProps) {
+export default function SummaryCard({
+  title,
+  value,
+  isCurrency,
+}: SummaryCardProps) {
   return (
     <Card className="p-0 shadow-md shadow-neutral-400 dark:shadow-neutral-900">
       <CardContent className="flex items-start px-4 py-3 gap-4">
@@ -19,10 +24,12 @@ export default function SummaryCard({ title, value }: SummaryCardProps) {
             {title}
           </span>
           <span className="text-3xl font-semibold text-neutral-700 dark:text-neutral-100">
-            {value.toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
+            {!isCurrency
+              ? value.toLocaleString("pt-BR")
+              : value.toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
           </span>
         </div>
       </CardContent>

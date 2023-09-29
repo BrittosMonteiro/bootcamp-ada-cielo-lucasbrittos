@@ -24,7 +24,10 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           variant={"ghost"}
           size={"icon"}
           className="h-8 w-8"
-          aria-label={`Item ${item.id}-${faker.number.int({ min: 100, max: 999 })}`}
+          aria-label={`Item ${item.id}-${faker.number.int({
+            min: 100,
+            max: 999,
+          })}`}
           role="button"
         >
           <Search />
@@ -79,12 +82,18 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           <SidebarDataItem
             id="grossAmount"
             label="Gross amount"
-            value={item.grossAmount}
+            value={item.grossAmount.toLocaleString("pt-BR", {
+              currency: "BRL",
+              style: "currency",
+            })}
           />
           <SidebarDataItem
             id="netAmount"
             label="Net amount"
-            value={item.netAmount}
+            value={item.netAmount.toLocaleString("pt-BR", {
+              currency: "BRL",
+              style: "currency",
+            })}
           />
           <SidebarDataItem
             id="terminal"
@@ -94,7 +103,10 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           <SidebarDataItem
             id="administrationFee"
             label="Administration Fee"
-            value={item.administrationFee}
+            value={item.administrationFee.toLocaleString("pt-BR", {
+              currency: "BRL",
+              style: "currency",
+            })}
           />
           <SidebarDataItem
             id="channelCode"
@@ -105,7 +117,10 @@ export default function TransactionsSidebar({ item }: TransactionsDialogProps) {
           <SidebarDataItem
             id="withdrawAmount"
             label="Withdraw amount"
-            value={item.withdrawAmount}
+            value={item.withdrawAmount.toLocaleString("pt-BR", {
+              currency: "BRL",
+              style: "currency",
+            })}
           />
           <SidebarDataItem
             id="minimumMDRAmmount"
