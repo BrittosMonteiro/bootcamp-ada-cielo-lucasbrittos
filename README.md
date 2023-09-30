@@ -22,7 +22,7 @@ To run this project, you'll need Node in its **18.17.0** version at least.
 4. It'll start serving the data to the frontend.
 
 After running, it's supposed to return data in the following model:
-```json
+```
 {
   data: {
     summary:{
