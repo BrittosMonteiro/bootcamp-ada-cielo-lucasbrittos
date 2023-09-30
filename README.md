@@ -82,10 +82,11 @@ These are the main tools used to develop:
 _To run this project, you'll need Node in its **18.17.0** version at least._
 
 1. Navigate to **_web_** folder through terminal;
-2. **npm install** or **npm i** - _to install node_modules;_
-3. **npm run test** - _to run all tests;_
-4. **npm run dev** - _to run it on development;_
-5. Open [**http://localhost:3000**](http://localhost:3000) - _so you'll be able to see its result_.
+2. Make a copy of the file **env.sample** and rename it to **env.local**;
+3. **npm install** or **npm i** - _to install node_modules;_
+4. **npm run test** - _to run all tests;_
+5. **npm run dev** - _to run it on development;_
+6. Open [**http://localhost:3000**](http://localhost:3000) - _so you'll be able to see its result_.
 
 # How it looks like
 
